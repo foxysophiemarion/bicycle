@@ -1,0 +1,589 @@
+//====================================================================================================
+
+.title {
+	font-size: rem(18);
+	font-weight: 700;
+	color: rgba(53, 55, 56, 1);
+	text-align: center;
+	letter-spacing: 3.6px;
+	text-transform: uppercase;
+}
+.text {
+	font-weight: 400;
+	color: rgba(132, 135, 137, 1);
+	text-align: center;
+	line-height: 34px;
+	@include adaptiveValue("font-size", 18, 14);
+}
+//========================================================================================================================================================
+
+.generation {
+	position: relative;
+	background-color: rgba(247, 247, 247, 1);
+	@include adaptiveValue("padding-top", 117, 80);
+	@include adaptiveValue("padding-bottom", 142, 80);
+	&__container {
+		max-width: rem(1100);
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		gap: rem(35);
+	}
+
+	&__icon {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+}
+//========================================================================================================================================================
+.oliva {
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 33%;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__column {
+	}
+}
+.column-one {
+	&__image {
+		width: 100%;
+		height: 100%;
+		background:
+			url("@img/icons/page/bike.png") 50% no-repeat,
+			url("@img/page/row01/01.png") 0 0 / cover no-repeat;
+	}
+}
+.column-two {
+	&__body {
+		padding: rem(70) rem(20);
+		max-width: rem(420);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+		align-items: center;
+	}
+
+	&__icon {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__line {
+		height: rem(1);
+		width: rem(50);
+		background-color: rgba(53, 55, 56, 0.2);
+	}
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+}
+//========================================================================================================================================================
+.boriosa {
+	&__row {
+		display: grid;
+		grid-template-columns: 33.333% 1fr;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__col {
+	}
+}
+.col-one {
+	&__body {
+		padding: rem(70) rem(20);
+		max-width: rem(420);
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+		align-items: center;
+	}
+
+	&__icon {
+	}
+
+	&__title {
+	}
+
+	&__text {
+	}
+
+	&__line {
+		height: rem(1);
+		width: rem(50);
+		background-color: rgba(53, 55, 56, 0.2);
+	}
+	&__image {
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.col-two {
+	&__image {
+		width: 100%;
+		height: 100%;
+		background:
+			url("@img/icons/page/bicycles.png") 50% no-repeat,
+			url("@img/page/row02/02.png") 0 0 / cover no-repeat;
+	}
+}
+//========================================================================================================================================================
+.retro {
+	&__row {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__imageone {
+		grid-row-start: 1;
+		grid-row-end: 7;
+		width: 100%;
+		background: url("@img/page/row03/01.png") 0 0 / cover no-repeat;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&__column {
+		grid-row-start: 1;
+		grid-row-end: 5;
+		text-align: center;
+		max-width: rem(440);
+		margin: 0 auto;
+		padding-top: rem(60);
+		padding-bottom: rem(60);
+	}
+
+	&__body {
+		padding: 0px rem(20) 0px rem(20);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(25);
+	}
+
+	&__icon {
+	}
+
+	&__title {
+	}
+
+	&__text {
+		line-height: math.div(30, 15);
+	}
+
+	&__line {
+		margin: 0 auto;
+		height: rem(2);
+		width: rem(50);
+		background-color: rgba(53, 55, 56, 0.2);
+	}
+
+	&__imagetwo {
+		grid-column-start: 2;
+		grid-row-start: 5;
+		grid-row-end: 7;
+		width: 100%;
+		background: url("@img/page/row03/02.png") 0 0 / cover no-repeat;
+		@media (max-width: $tablet) {
+			grid-column-start: 1;
+			grid-row-start: 5;
+			grid-row-end: 7;
+		}
+	}
+	&__imagethree {
+		grid-row-start: 1;
+		grid-row-end: 7;
+		width: 100%;
+		background: url("@img/page/row03/03.png") 0 0 / cover no-repeat;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+	}
+}
+
+//========================================================================================================================================================
+
+.main-block {
+	background-color: rgba(247, 247, 247, 1);
+	@include adaptiveValue("padding-top", 125, 50);
+	@include adaptiveValue("padding-bottom", 70, 40);
+	// .main-block__container
+
+	&__container {
+	}
+
+	// .main-block__body
+
+	&__body {
+		text-align: center;
+	}
+
+	// .main-block__slider
+
+	&__slider {
+	}
+
+	// .main-block__swiper
+
+	&__swiper {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 90, 30);
+		}
+	}
+
+	// .main-block__slide
+
+	&__slide {
+	}
+
+	// .main-block__media
+
+	&__media {
+	}
+
+	// .main-block__advantages
+
+	&__advantages {
+	}
+
+	// .main-block__controll
+
+	&__controll {
+	}
+}
+
+.controll-main-block {
+	// .controll-main-block__dotts
+
+	&__dotts {
+		display: inline-grid;
+		grid-auto-flow: column;
+		gap: rem(10);
+		transform: translate(0px, 10%);
+		.swiper-pagination-bullet {
+			cursor: pointer;
+			height: rem(30);
+			width: rem(18);
+			position: relative;
+			transition: all 0.3s ease 0s;
+			&::after {
+				content: "";
+				height: rem(10);
+				position: absolute;
+				border-radius: 50%;
+				width: rem(10);
+				border: 1px solid rgba(200, 200, 200, 1);
+			}
+		}
+		.swiper-pagination-bullet-active {
+			&::after {
+				background-color: rgba(169, 175, 179, 1);
+			}
+		}
+	}
+
+	// .controll-main-block__fraction
+
+	&__fraction {
+	}
+}
+
+.slide-main-block {
+	// .slide-main-block__content
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: rem(30);
+	}
+
+	// .slide-main-block__title
+
+	&__title {
+		font-size: rem(18);
+		font-weight: 700;
+		color: rgba(53, 55, 56, 1);
+		letter-spacing: 1.8px;
+		span {
+			font-size: rem(18);
+			font-weight: 300;
+			color: rgba(132, 135, 137, 1);
+			letter-spacing: 1.8px;
+		}
+	}
+
+	// .slide-main-block__text
+
+	&__text {
+		@include adaptiveValue("font-size", 24, 18);
+		font-style: italic;
+		color: rgba(132, 135, 137, 1);
+		line-height: math.div(34, 20);
+	}
+}
+
+//========================================================================================================================================================
+.images {
+	&__row {
+	}
+
+	&__column {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr 1fr;
+		}
+	}
+}
+.column-item {
+	&__gridone {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	&__item-1 {
+		padding: 50%;
+		background: url("@img/page/row04/01.png") 0 0 / cover no-repeat;
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 2;
+		grid-column-end: 2;
+	}
+
+	&__item-2 {
+		background: url("@img/page/row04/02.png") 0 0 / cover no-repeat;
+
+		grid-row-start: 1;
+		grid-column-start: 2;
+		grid-row-end: 2;
+		grid-column-end: 3;
+	}
+
+	&__item-3 {
+		background: url("@img/page/row04/06.png") 0 0 / cover no-repeat;
+
+		grid-row-start: 2;
+		grid-column-start: 1;
+
+		grid-row-end: 3;
+		grid-column-end: 3;
+	}
+
+	&__flex {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__item-4 {
+		background: url("@img/page/row04/03.png") 0 0 / cover no-repeat;
+	}
+
+	&__item-5 {
+		background: url("@img/page/row04/04.png") 0 0 / cover no-repeat;
+	}
+
+	&__gridtwo {
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	&__item-6 {
+		background: url("@img/page/row04/05.png") 0 0 / cover no-repeat;
+
+		grid-row-start: 1;
+		grid-column-start: 1;
+		grid-row-end: 2;
+		grid-column-end: 3;
+	}
+
+	&__item-7 {
+		background: url("@img/page/row04/07.png") 0 0 / cover no-repeat;
+
+		grid-row-start: 2;
+		grid-column-start: 1;
+		grid-row-end: 3;
+		grid-column-end: 2;
+	}
+
+	&__item-8 {
+		background: url("@img/page/row04/08.png") 0 0 / cover no-repeat;
+
+		grid-row-start: 2;
+		grid-column-start: 2;
+		grid-row-end: 3;
+		grid-column-end: 3;
+	}
+}
+
+.item {
+	position: relative;
+
+	&::before {
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		content: "";
+		background:
+			url("@img/icons/page/bikeshop.png") 50% no-repeat,
+			rgba(100, 194, 158, 0.8);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+.button {
+	&__body {
+		background-color: rgba(40, 47, 53, 1);
+		display: flex;
+		justify-content: center;
+		@include adaptiveValue("padding-top", 75, 40);
+		@include adaptiveValue("padding-bottom", 75, 40);
+	}
+
+	&__btn {
+		transition: all 0.3s ease 0s;
+		font-weight: 700;
+		color: rgba(255, 255, 255, 1);
+		letter-spacing: 2.8px;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: rem(50);
+		width: rem(300);
+		border: 1px solid rgba(255, 255, 255, 1);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+			}
+		}
+	}
+}
+
+//========================================================================================================================================================
+.form {
+	&__body {
+		padding: rem(10);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(25);
+		@include adaptiveValue("padding-top", 110, 50);
+		@include adaptiveValue("padding-bottom", 110, 50);
+	}
+
+	&__logo {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+	}
+
+	&__subtitle {
+		font-size: rem(24);
+		font-style: italic;
+		color: rgba(132, 135, 137, 1);
+		line-height: math.div(34, 20);
+	}
+
+	&__input-body {
+	}
+}
+.input-body {
+	display: flex;
+	gap: rem(8);
+	@media (max-width: $mobileSmall) {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		gap: rem(30);
+	}
+	&__input {
+		font-size: rem(20);
+		font-style: italic;
+		color: rgba(146, 146, 146, 1);
+		line-height: 24px;
+		transition: all 0.3s ease 0s;
+		height: rem(70);
+		border: 1px solid rgb(211, 215, 217);
+		padding: rem(25) 0 rem(25) rem(25);
+		@include adaptiveValue("width", 400, 300);
+		@media (max-width: $mobileSmall) {
+			font-size: rem(16);
+			width: 100%;
+		}
+
+		&:focus {
+			box-shadow: 0 0 20px rgb(211, 215, 217);
+		}
+	}
+
+	&__button {
+		transition: all 0.3s ease 0s;
+		height: rem(70);
+		width: rem(125);
+		background-color: rgba(100, 194, 158, 1);
+		font-size: rem(24);
+		font-weight: 300;
+		color: rgba(255, 255, 255, 1);
+		text-align: center;
+		line-height: 24px;
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 10px rgba(100, 194, 158, 1);
+			}
+		}
+		&:active {
+			background-color: rgba(40, 47, 53, 1);
+			box-shadow: 0 0 10px rgba(40, 47, 53, 1);
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+}

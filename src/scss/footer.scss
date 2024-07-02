@@ -1,0 +1,83 @@
+//====================================================================================================
+.footer {
+	background-color: rgba(247, 247, 247, 1);
+	@include adaptiveValue("padding-top", 100, 50);
+	@include adaptiveValue("padding-bottom", 100, 50);
+
+	&__container {
+		max-width: rem(1100);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: rem(30);
+		}
+	}
+
+	&__address {
+	}
+
+	&__social {
+		display: flex;
+		gap: rem(15);
+		a {
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					border-radius: 50%;
+					box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+
+	&__lable {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		width: rem(240);
+		justify-content: flex-end;
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+
+	&__text {
+		font-style: italic;
+		color: rgba(132, 135, 137, 1);
+		line-height: 18px;
+	}
+
+	&__link {
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				transform: rotate(360deg);
+			}
+		}
+		img {
+		}
+	}
+}
+.address {
+	line-height: 18px;
+	color: rgba(132, 135, 137, 1);
+	@media (max-width: $mobile) {
+		text-align: center;
+	}
+	&__city {
+		font-weight: 700;
+		font-size: rem(16);
+	}
+
+	&__street {
+		font-style: italic;
+	}
+
+	&__mail {
+		font-style: italic;
+	}
+}
+
+//====================================================================================================
